@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lamentela del Professore - Novembre</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-image: url('https://www.wallpapers13.com/wp-content/uploads/2017/10/Autumn-leaves-pictures.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            color: #fff;
+        }
+        
+        .container {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 15px;
+            max-width: 600px;
+            width: 100%;
+            margin: 20px;
+        }
+        
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.5;
+            margin-bottom: 20px;
+            transition: font-size 0.3s ease-in-out;
+        }
+
+        button {
+            background-color: #ff6f47;
+            border: none;
+            padding: 10px 20px;
+            color: white;
+            font-size: 1.1em;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #d85a3d;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Lettera del Professore di Novembre</h1>
+        <p id="lamentela">
+            Cari studenti della quinta,  
+            sono molto deluso dal fatto che non vi siate presentati in massa all'ultima lezione di Git, che era una delle migliori di tutto il corso.   
+            Non capisco cosa possa essere stato così urgente da farvi perdere un'opportunità come questa.  
+            Git è uno strumento fondamentale per ogni programmatore e, sinceramente, avrei voluto vedere più entusiasmo da parte vostra.  
+            Se non volete farvi travolgere dalle difficoltà del progetto finale, forse dovreste ripensarci!  
+            Vi aspetto alla prossima lezione, con la speranza che la vostra motivazione cresca come le foglie in questo mese autunnale.
+        </p>
+        <button onclick="ingrandisciTesto()">Ingrandisci la lamentela!</button>
+    </div>
+
+    <script>
+        function ingrandisciTesto() {
+            const lamentela = document.getElementById('lamentela');
+            let currentSize = parseFloat(window.getComputedStyle(lamentela).fontSize);
+            lamentela.style.fontSize = (currentSize + 5) + 'px';
+        }
+    </script>
+
+</body>
+</html>
